@@ -1,7 +1,5 @@
 package org.example;
 
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Scanner;
 import static org.example.Displays.*;
 
@@ -226,7 +224,7 @@ public class ScientificCalculator {
         }
     }
 
-    public static void performBinaryOperation(@NotNull Scanner scanner, String operationName, @NotNull BinaryOperation operation) {
+    public static void performBinaryOperation(Scanner scanner, String operationName,BinaryOperation operation) {
         System.out.print("Enter first number: ");
         //def num1
         double num1 = scanner.nextDouble();
@@ -245,7 +243,7 @@ public class ScientificCalculator {
 
     }
 
-    public static void performUnaryOperation(@NotNull Scanner scanner, String operationName, @NotNull UnaryOperation operation) {
+    public static void performUnaryOperation(Scanner scanner, String operationName, UnaryOperation operation) {
         System.out.print("Enter a number: ");
         //def num
         double num = scanner.nextDouble();
@@ -345,7 +343,7 @@ public class ScientificCalculator {
         System.out.println();
     }
 
-    public static void performTernaryOperation(@NotNull Scanner scanner, String operationName, @NotNull TernaryOperation operation) {
+    public static void performTernaryOperation(Scanner scanner, String operationName,TernaryOperation operation) {
         System.out.print("Enter first number (a): ");
         //def numa
         double numA = scanner.nextDouble();
