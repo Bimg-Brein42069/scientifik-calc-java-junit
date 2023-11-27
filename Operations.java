@@ -273,11 +273,17 @@ public class Operations {
         return res;
     }
 
-    public static int sumofn(int n) {return (n * (n+1)) / 2;    }
+    public static int sumofn(int n) {
+        return (n * (n+1)) / 2;
+    }
 
-    public static int sum2ofn(int n) {return (n * (n+1) * (2*n+1)) / 6;}
+    public static int sum2ofn(int n) {
+        return (n * (n+1) * (2*n+1)) / 6;
+    }
 
-    public static int sum3ofn(int n) { return (int)Math.pow((double)(n * (n+1)) / 2,2);    }
+    public static int sum3ofn(int n) {
+        return (int)Math.pow((double)(n * (n+1)) / 2,2);
+    }
 
     // Combination and Permutation functions
     public static double combination(double n, double r) {
