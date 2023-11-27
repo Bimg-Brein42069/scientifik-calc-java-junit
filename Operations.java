@@ -273,17 +273,11 @@ public class Operations {
         return res;
     }
 
-    public static int sumofn(int n) {
-        return (n * (n+1)) / 2;
-    }
+    public static int sumofn(int n) {return (n * (n+1)) / 2;    }
 
-    public static int sum2ofn(int n) {
-        return (n * (n+1) * (2*n+1)) / 6;
-    }
+    public static int sum2ofn(int n) {return (n * (n+1) * (2*n+1)) / 6;}
 
-    public static int sum3ofn(int n) {
-        return (int)Math.pow((double)(n * (n+1)) / 2,2);
-    }
+    public static int sum3ofn(int n) { return (int)Math.pow((double)(n * (n+1)) / 2,2);    }
 
     // Combination and Permutation functions
     public static double combination(double n, double r) {
@@ -485,7 +479,7 @@ public class Operations {
     }
 
     public static double geoaverage(double num1, double num2) {
-        System.out.println("Performing Geometric Mean Calculation: ( " + num1 + " + " + num2 + " ) / 2");
+        System.out.println("Performing Geometric Mean Calculation on " + num1 + " , " + num2 );
         double result =  sqrt(num1 * num2);
         if(Double.isNaN(result)){
             System.out.println("Error: Invalid Input");
@@ -496,7 +490,7 @@ public class Operations {
     }
 
     public static double harmaverage(double num1, double num2) {
-        System.out.println("Performing Harmonic Mean Calculation: ( " + num1 + " + " + num2 + " ) / 2");
+        System.out.println("Performing Harmonic Mean Calculation on  " + num1 + " ," + num2 + " ");
         double result =  1/num1 + 1/num2;
         if(Double.isNaN(result)){
             System.out.println("Error: Invalid Input");

@@ -1,5 +1,7 @@
 package org.example;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 import static org.example.Displays.*;
 
@@ -153,10 +155,10 @@ public class ScientificCalculator {
                         performBinaryOperation(scanner, "Average", Operations::average);
                         break;
                     case 35:
-                        performBinaryOperation(scanner, "Average", Operations::geoaverage);
+                        performBinaryOperation(scanner, "Geometric Average", Operations::geoaverage);
                         break;
                     case 36:
-                        performBinaryOperation(scanner, "Average", Operations::harmaverage);
+                        performBinaryOperation(scanner, "Harmonic Average", Operations::harmaverage);
                         break;
                     case 37:
                         performUnaryOperation(scanner, "Inverse", Operations::inverse);
@@ -224,7 +226,7 @@ public class ScientificCalculator {
         }
     }
 
-    public static void performBinaryOperation(Scanner scanner, String operationName, BinaryOperation operation) {
+    public static void performBinaryOperation(@NotNull Scanner scanner, String operationName, @NotNull BinaryOperation operation) {
         System.out.print("Enter first number: ");
         //def num1
         double num1 = scanner.nextDouble();
@@ -235,13 +237,15 @@ public class ScientificCalculator {
         //use res
         if(Double.isInfinite(res))
             System.out.println("Value out of range!!");
-        else if(!Double.isNaN(res))
+        else if(Double.isNaN(res))
+            System.out.println("Error: Invalid input.");
+        else
             System.out.println("Result: " + res);
         System.out.println();
 
     }
 
-    public static void performUnaryOperation(Scanner scanner, String operationName, UnaryOperation operation) {
+    public static void performUnaryOperation(@NotNull Scanner scanner, String operationName, @NotNull UnaryOperation operation) {
         System.out.print("Enter a number: ");
         //def num
         double num = scanner.nextDouble();
@@ -249,7 +253,9 @@ public class ScientificCalculator {
         //use res
         if(Double.isInfinite(res))
             System.out.println("Value out of range!!");
-        else if(!Double.isNaN(res))
+        else if(Double.isNaN(res))
+            System.out.println("Error: Invalid input.");
+        else
             System.out.println("Result: " + res);
         System.out.println();
     }
@@ -339,7 +345,7 @@ public class ScientificCalculator {
         System.out.println();
     }
 
-    public static void performTernaryOperation(Scanner scanner, String operationName, TernaryOperation operation) {
+    public static void performTernaryOperation(@NotNull Scanner scanner, String operationName, @NotNull TernaryOperation operation) {
         System.out.print("Enter first number (a): ");
         //def numa
         double numA = scanner.nextDouble();
@@ -353,7 +359,9 @@ public class ScientificCalculator {
         //use res
         if(Double.isInfinite(res))
             System.out.println("Value out of range!!");
-        else if(!Double.isNaN(res))
+        else if(Double.isNaN(res))
+            System.out.println("Error: Invalid input.");
+        else
             System.out.println("Result: " + res);
         System.out.println();
     }
